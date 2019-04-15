@@ -1,5 +1,7 @@
 import React from 'react';
 import {  Col,Card,Button } from 'react-bootstrap';
+import holderimage from '../holderimage.png';
+
 
 class ProductListItem extends React.Component {
   constructor(props) {
@@ -25,7 +27,7 @@ class ProductListItem extends React.Component {
       <Col xs={12} md={3}>
 
         <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src="holder.js/100px180" />
+          <Card.Img variant="top" src={holderimage} />
           <Card.Body>
             <Card.Title>Product Item</Card.Title>
             <Card.Text>
@@ -44,6 +46,7 @@ class ProductListItem extends React.Component {
 
 
       </Col>
+
     );
   }
 }
