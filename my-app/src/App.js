@@ -20,9 +20,13 @@ function App(){
       <BrowserRouter>
 
          <Switch>
-          
-             <Route path='/products/:id' component={ ProductDetail  } />
+
              <Route exact path='/' component={Home } />
+             <Route
+              exact
+              path="/products/:pid"
+              component={ProductDetail }
+            />
              <Redirect from='*' to='/' />
          </Switch>
 

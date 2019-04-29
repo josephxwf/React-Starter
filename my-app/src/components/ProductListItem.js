@@ -25,7 +25,13 @@ class ProductListItem extends React.Component {
 
 
       <Col xs={12} md={3}>
-
+      <a
+          href={"/products/" + this.props.index}
+          style={{
+            textDecoration: "none",
+            color: "black"
+          }}
+        >
         <Card style={{ width: '18rem' }}>
           <Card.Img variant="top" src={holderimage} />
           <Card.Body>
@@ -42,6 +48,7 @@ class ProductListItem extends React.Component {
             <Button className="close" onClick={this.onClickClose}>&times;</Button>
           </Card.Body>
         </Card>
+      </a>
 
 
 

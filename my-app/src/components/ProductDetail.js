@@ -1,11 +1,29 @@
 import React from 'react';
 import logo from '../logo.svg';
 
-function ProductDetail(props){
+class ProductDetail extends React.Component {
+  constructor(props) {
+    super(props);
+  //  this.selectPolicy = this.selectPolicy.bind(this);
+    this.state = { policy: 'General Liability' };
+  }
+
+  componentDidMount () {
+
+
+ }
+
+
+  render() {
+
+   const { pid } = this.props.match.params;
+   console.log(pid);
+
 
   return(
 
-     <h1> Hello></h1>
+     <h1> Product ID is: {pid}</h1>
 )
+}
 }
 export default ProductDetail;
