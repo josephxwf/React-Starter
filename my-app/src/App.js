@@ -22,11 +22,7 @@ function App(){
          <Switch>
 
              <Route exact path='/' component={Home } />
-             <Route
-              exact
-              path="/products/:pid"
-              component={ProductDetail }
-            />
+             <Route exact path="/products/:pid" component={ProductDetail } />
              <Redirect from='*' to='/' />
          </Switch>
 

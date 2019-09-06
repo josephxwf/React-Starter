@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../logo.svg';
+import ReactDOM from 'react-dom';
 
 class ProductDetail extends React.Component {
   constructor(props) {
@@ -14,16 +15,22 @@ class ProductDetail extends React.Component {
  }
 
 
+
+
+
+
   render() {
 
    const { pid } = this.props.match.params;
-   console.log(pid);
+   const elem =  <h1> Product ID is: {pid} </h1>; 
 
 
-  return(
+    return ReactDOM.createPortal(
+        elem ,
+        document.getElementById('root2')
+      );
 
-     <h1> Product ID is: {pid}</h1>
-)
+
 }
 }
 export default ProductDetail;
